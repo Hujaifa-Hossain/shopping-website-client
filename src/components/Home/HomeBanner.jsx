@@ -3,7 +3,12 @@ import React from 'react';
 const HomeBanner = () => {
   return (
     <div>
-      Home banner
+      {/* 
+      container
+
+      
+      */}
+      <h3>fdsfsdf</h3>
     </div>
   );
 };

@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
-import { FeatureChild, FeatureContainer, TabContainer, Tabs } from './AboutElements';
 
 const AboutFeature = () => {
   const [index, setIndex] = useState(0)
   return (
-    <FeatureContainer>
-      <FeatureChild>
-        <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/about-img-1.jpg" alt="" />
-      </FeatureChild>
-      <FeatureChild>
-        <Tabs>
-          <span className={`tab-head ${index === 0 ? 'active' : null}`} onClick={() => setIndex(0)}>
+    <div className='m-8 flex lg:flex-row  sm:flex-col flex-col'>
+      <div className='flex-1'>
+        <img className='w-full' src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/about-img-1.jpg" alt="" />
+      </div>
+
+      <div className='flex-1 mx-2 '>
+        
+        <div className='my-2 flex flex-col md:block'>
+          <span className={`border border-black py-1 px-5 m-2 hover:bg-gray-900 hover:text-white cursor-pointer font-medium tracking-wider uppercase ${index === 0 ? 'bg-gray-900 text-white' : null}`} onClick={() => setIndex(0)}>
             About
           </span>
-          <span className={`tab-head ${index === 1 ? 'active' : null}`} onClick={() => setIndex(1)}>
+          <span className={`border border-black py-1 px-5 m-2 hover:bg-gray-900 hover:text-white cursor-pointer font-medium tracking-wider uppercase ${index === 1 ? 'bg-gray-900 text-white' : null}`} onClick={() => setIndex(1)}>
             Services
           </span>
-          <span className={`tab-head ${index === 2 ? 'active' : null}`} onClick={() => setIndex(2)}>
+          <span className={`border border-black py-1 px-5 m-2 hover:bg-gray-900 hover:text-white cursor-pointer font-medium tracking-wider uppercase ${index === 2 ? 'bg-gray-900 text-white' : null}`} onClick={() => setIndex(2)}>
             History
           </span>
-        </Tabs>
-        <TabContainer>
+        </div>
+
+        <div className='m-2'>
           <div hidden={index !== 0}>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam hic voluptatum, qui blanditiis molestias in nam aliquid ullam rem quibusdam accusantium iste nulla rerum possimus suscipit totam sapiente quo accusamus!
@@ -49,19 +51,9 @@ const AboutFeature = () => {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam hic voluptatum, qui blanditiis molestias in nam aliquid ullam rem quibusdam accusantium iste nulla rerum possimus suscipit totam sapiente quo accusamus!
             </p>
           </div>
-      </TabContainer>
-    </FeatureChild>
-    </FeatureContainer >
-
-    // <div>
-    //   {/* container 
-    //       // first div
-    //       image
-    //       // second div
-    //       Tabs> tab head
-    //       Tab container> tab body
-    //   */}
-    // </div>
+        </div>
+      </div>
+    </div >
   );
 };
 

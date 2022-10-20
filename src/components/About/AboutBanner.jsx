@@ -1,14 +1,12 @@
 import React from 'react';
-import { BannerContainer, BannerTitle } from './AboutElements';
+import about from '../../assets/about.jpg';
 
 
 const AboutBanner = () => {
   return (
-    <BannerContainer>
-      <BannerTitle>
-        About Us
-      </BannerTitle>
-    </BannerContainer>
+    <div className={`h-40 flex justify-center items-center bg-[url(${about})]`}>
+      <h2 className='uppercase font-bold'>About Us</h2>
+    </div>
   );
 };
 
